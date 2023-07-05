@@ -1,9 +1,9 @@
 body {
   /* text-align: center; */
-  background-image: url('/src/images/background.jpg');
+  /* background-image: url('/src/images/background.jpg'); */
   background-size: cover;
   mix-blend-mode: darken;
-  background-color: #61dafb;
+  /* background-color: #61dafb; */
 }
 
 .App-logo {
