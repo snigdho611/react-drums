@@ -1,5 +1,9 @@
-.App {
-  text-align: center;
+body {
+  /* text-align: center; */
+  background-image: url('/src/images/background.jpg');
+  background-size: cover;
+  mix-blend-mode: darken;
+  background-color: #61dafb;
 }
 
 .App-logo {
