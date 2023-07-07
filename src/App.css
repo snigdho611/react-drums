@@ -1,9 +1,34 @@
-body {
-  /* text-align: center; */
-  /* background-image: url('/src/images/background.jpg'); */
+.page{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.instrument{
+  background-color: skyblue;
+  height: 100px;
+  width: 100px;
+  transition: background-color 0.25s, transform 0.25s;
+  border-radius: 50%;
+}
+
+.instrument-clicked{
+  height: 100px;
+  width: 100px;
+  transition: background-color 0.25s, transform 0.25s;
+  border-radius: 50%;
+  background-color: blue;
+  transform: scale(0.95);
+}
+
+.instrument:active{
+  background-color: blue;
+  transform: scale(0.95);
+}
+/* body {
   background-size: cover;
   mix-blend-mode: darken;
-  /* background-color: #61dafb; */
 }
 
 .App-logo {
@@ -39,4 +64,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
+} */
