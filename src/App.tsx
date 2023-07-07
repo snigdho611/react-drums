@@ -69,8 +69,8 @@ function App() {
       }
       if (boomRef.current) {
         boomRef.current.addEventListener("click", () => {
-          openhatAudio.currentTime = 0;
-          openhatAudio.play();
+          boomAudio.currentTime = 0;
+          boomAudio.play();
         });
       }
       if (rideRef.current) {
@@ -189,7 +189,7 @@ function App() {
 
   return (
     <div className="page">
-      <span className="title">Interactive Drum Machine</span>
+      <div className="title">Interactive Drum Machine</div>
       <div className="row">
         <button className={`instrument ${clapClicked ? "instrument-clicked" : ""}`} ref={clapRef}>
           <span className="instrument-name">A</span>

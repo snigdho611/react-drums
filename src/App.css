@@ -4,7 +4,6 @@ body {
 }
 
 .page {
-  width: 50%;
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -23,6 +22,7 @@ body {
   font-size: 30px;
   margin: 50px auto;
   color: rgb(66, 66, 66);
+  /* width: 100%; */
 }
 
 .instrument {
