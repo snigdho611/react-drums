@@ -31,8 +31,6 @@ function App() {
   const [tomClicked, setTomClicked] = useState<boolean>(false);
   const [tinkClicked, setTinkClicked] = useState<boolean>(false);
 
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-
   useMemo(() => {
     const clapAudio = new Audio(clap);
     const hihatAudio = new Audio(hihat);
@@ -132,48 +130,48 @@ function App() {
     };
 
     const handleUserKeyPressDown = (event: KeyboardEvent) => {
-      if ((event.key === "a" || event.key === "A")) {
+      if (event.key === "a" || event.key === "A") {
         setClapClicked(true);
         clapAudio.currentTime = 0;
         clapAudio.play();
       }
       if (event.key === "s" || event.key === "S") {
-        setHihatClicked(true)
+        setHihatClicked(true);
         hihatAudio.currentTime = 0;
         hihatAudio.play();
       }
       if (event.key === "d" || event.key === "D") {
-        setKickClicked(true)
+        setKickClicked(true);
         kickAudio.currentTime = 0;
         kickAudio.play();
       }
       if (event.key === "f" || event.key === "F") {
-        setOpenhatClicked(true)
+        setOpenhatClicked(true);
         openhatAudio.currentTime = 0;
         openhatAudio.play();
       }
       if (event.key === "g" || event.key === "G") {
-        setBoomClicked(true)
+        setBoomClicked(true);
         boomAudio.currentTime = 0;
         boomAudio.play();
       }
       if (event.key === "h" || event.key === "H") {
-        setRideClicked(true)
+        setRideClicked(true);
         rideAudio.currentTime = 0;
         rideAudio.play();
       }
       if (event.key === "j" || event.key === "J") {
-        setSnareClicked(true)
+        setSnareClicked(true);
         snareAudio.currentTime = 0;
         snareAudio.play();
       }
       if (event.key === "k" || event.key === "K") {
-        setTomClicked(true)
+        setTomClicked(true);
         tomAudio.currentTime = 0;
         tomAudio.play();
       }
       if (event.key === "l" || event.key === "L") {
-        setTinkClicked(true)
+        setTinkClicked(true);
         tinkAudio.currentTime = 0;
         tinkAudio.play();
       }
@@ -191,36 +189,52 @@ function App() {
 
   return (
     <div className="page">
-      <button
-        className={clapClicked ? "instrument-clicked" : "instrument"}
-        ref={clapRef}
-      >
-        clap
-      </button>
-      <button className={hihatClicked ? "instrument-clicked" : "instrument"} ref={hihatRef}>
-        hihat
-      </button>
-      <button className={kickClicked ? "instrument-clicked" : "instrument"} ref={kickRef}>
-        kick
-      </button>
-      <button className={openhatClicked ? "instrument-clicked" : "instrument"} ref={openhatRef}>
-        openhat
-      </button>
-      <button className={boomClicked ? "instrument-clicked" : "instrument"} ref={boomRef}>
-        boom
-      </button>
-      <button className={rideClicked ? "instrument-clicked" : "instrument"} ref={rideRef}>
-        ride
-      </button>
-      <button className={snareClicked ? "instrument-clicked" : "instrument"} ref={snareRef}>
-        snare
-      </button>
-      <button className={tomClicked ? "instrument-clicked" : "instrument"} ref={tomRef}>
-        tom
-      </button>
-      <button className={tinkClicked ? "instrument-clicked" : "instrument"} ref={tinkRef}>
-        tink
-      </button>
+      <span className="title">Interactive Drum Machine</span>
+      <div className="row">
+        <button className={`instrument ${clapClicked ? "instrument-clicked" : ""}`} ref={clapRef}>
+          <span className="instrument-name">A</span>
+          <span className="instrument-key">clap</span>
+        </button>
+        <button className={`instrument ${hihatClicked ? "instrument-clicked" : ""}`} ref={hihatRef}>
+          <span className="instrument-name">S</span>
+          <span className="instrument-key">hihat</span>
+        </button>
+        <button className={`instrument ${kickClicked ? "instrument-clicked" : ""}`} ref={kickRef}>
+          <span className="instrument-name">D</span>
+          <span className="instrument-key">kick</span>
+        </button>
+      </div>
+      <div className="row">
+        <button
+          className={`instrument ${openhatClicked ? "instrument-clicked" : ""}`}
+          ref={openhatRef}
+        >
+          <span className="instrument-name">F</span>
+          <span className="instrument-key">openhat</span>
+        </button>
+        <button className={`instrument ${boomClicked ? "instrument-clicked" : ""}`} ref={boomRef}>
+          <span className="instrument-name">G</span>
+          <span className="instrument-key">boom</span>
+        </button>
+        <button className={`instrument ${rideClicked ? "instrument-clicked" : ""}`} ref={rideRef}>
+          <span className="instrument-name">H</span>
+          <span className="instrument-key">ride</span>
+        </button>
+      </div>
+      <div className="row">
+        <button className={`instrument ${snareClicked ? "instrument-clicked" : ""}`} ref={snareRef}>
+          <span className="instrument-name">J</span>
+          <span className="instrument-key">snare</span>
+        </button>
+        <button className={`instrument ${tomClicked ? "instrument-clicked" : ""}`} ref={tomRef}>
+          <span className="instrument-name">K</span>
+          <span className="instrument-key">tom</span>
+        </button>
+        <button className={`instrument ${tinkClicked ? "instrument-clicked" : ""}`} ref={tinkRef}>
+          <span className="instrument-name">L</span>
+          <span className="instrument-key">tink</span>
+        </button>
+      </div>
     </div>
   );
 }

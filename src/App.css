@@ -1,31 +1,80 @@
-.page{
-  width: 100%;
+body {
+  background-color: #efefef;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.page {
+  width: 50%;
   display: flex;
   gap: 10px;
   justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  /* height: 100vh; */
 }
 
-.instrument{
-  background-color: skyblue;
-  height: 100px;
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.title {
+  font-size: 30px;
+  margin: 50px auto;
+  color: rgb(66, 66, 66);
+}
+
+.instrument {
+  background: #efefef;
   width: 100px;
+  min-width: 100px;
+  height: 100px;
+  min-height: 100px;
   transition: background-color 0.25s, transform 0.25s;
   border-radius: 50%;
-  
+  border: 1px solid rgb(65, 65, 65);
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border: none;
+  box-shadow: -6px -6px 14px #fafafab3, -6px -6px 10px #fafafa80, 6px 6px 8px #fafafa13,
+    6px 6px 10px #00000026;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(102, 102, 102);
 }
 
-.instrument-clicked{
-  height: 100px;
-  width: 100px;
+.instrument-key {
+  font-size: 14px;
+}
+
+.instrument-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.instrument:hover {
+  box-shadow: -2px -2px 6px rgba(250, 250, 250, 0.6), -2px -2px 4px rgba(250, 250, 250, 0.4),
+    2px 2px 2px rgba(250, 250, 250, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.instrument-clicked {
   transition: background-color 0.25s, transform 0.25s;
-  border-radius: 50%;
-  background-color: rgb(0, 140, 255);
+  /* background-color: rgb(0, 140, 250); */
   transform: scale(0.95);
+  box-shadow: inset -2px -2px 6px #fafafab3, inset -2px -2px 4px #fafafa80,
+    inset 2px 2px 2px #fafafa13, inset 2px 2px 4px #00000026;
 }
 
-.instrument:active{
-  background-color: rgb(0, 140, 255);
+.instrument:active {
+  /* background-color: rgb(0, 140, 250); */
   transform: scale(0.95);
+  box-shadow: inset -2px -2px 6px #fafafab3, inset -2px -2px 4px #fafafa80,
+    inset 2px 2px 2px #fafafa13, inset 2px 2px 4px #00000026;
 }
 /* body {
   background-size: cover;
